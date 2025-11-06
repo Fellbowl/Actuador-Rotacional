@@ -27730,12 +27730,13 @@ void __attribute__((picinterrupt(("irq(TMR6),base(8)")))) TMR6_ISR()
     static uint16_t AN2_b;
     static uint16_t AN4_b;
 
+    AN2_b = ADCC_GetSingleConversion(AN2);
+    valor_AN2 = (AN2_b - 2048)*35;
+
     if(Analog_ref) {
-        AN2_b = ADCC_GetSingleConversion(AN2);
-        valor_AN2 = (AN2_b - 2048)*35;
+        AN4_b = ADCC_GetSingleConversion(AN4);
+        valor_AN4 = (AN4_b - 2048)*35;
     }
-    AN4_b = ADCC_GetSingleConversion(AN4);
-    valor_AN4 = (AN4_b - 2048)*35;
 
     adc_ready = 1;
 }

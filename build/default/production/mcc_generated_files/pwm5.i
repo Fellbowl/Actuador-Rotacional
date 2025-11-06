@@ -27276,8 +27276,13 @@ unsigned char __t3rd16on(void);
 # 102 "mcc_generated_files/pwm5.h"
  void PWM5_Initialize(void);
 # 129 "mcc_generated_files/pwm5.h"
- void PWM5_LoadDutyValue(uint16_t dutyValue);
+ void PWM5_LoadDutyValue(int16_t dutyValue);
 # 52 "mcc_generated_files/pwm5.c" 2
+
+# 1 "mcc_generated_files/pin_manager.h" 1
+# 174 "mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_Initialize (void);
+# 53 "mcc_generated_files/pwm5.c" 2
 
 
 
@@ -27300,8 +27305,14 @@ unsigned char __t3rd16on(void);
     CCPTMRS1bits.P5TSEL = 1;
  }
 
- void PWM5_LoadDutyValue(uint16_t dutyValue)
+ void PWM5_LoadDutyValue(int16_t dutyValue)
  {
+     if(dutyValue < 0) {
+         dutyValue = -dutyValue;
+         do { LATAbits.LATA7 = 1; } while(0);
+     }
+     else do { LATAbits.LATA7 = 0; } while(0);
+
 
      PWM5DCH = (dutyValue & 0x03FC)>>2;
 

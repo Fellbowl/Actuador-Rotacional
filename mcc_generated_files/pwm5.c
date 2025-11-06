@@ -72,7 +72,7 @@
     CCPTMRS1bits.P5TSEL = 1;
  }
 
- void PWM5_LoadDutyValue(uint16_t dutyValue)
+ void PWM5_LoadDutyValue(int16_t dutyValue)
  {
      if(dutyValue < 0) {
          dutyValue = -dutyValue;

@@ -27858,7 +27858,7 @@ _Bool TMR2_HasOverflowOccured(void);
 # 102 "mcc_generated_files/pwm5.h"
  void PWM5_Initialize(void);
 # 129 "mcc_generated_files/pwm5.h"
- void PWM5_LoadDutyValue(uint16_t dutyValue);
+ void PWM5_LoadDutyValue(int16_t dutyValue);
 # 59 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/fvr.h" 1

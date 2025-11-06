@@ -136,15 +136,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _PR6 `Vuc ~T0 @X0 0 e@16275 ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt irq ( TMR6 ) base ( 8 ) ]
-"56 mcc_generated_files/tmr6.c
-[; ;mcc_generated_files/tmr6.c: 56: extern _Bool Analog_ref;
-[v _Analog_ref `a ~T0 @X0 0 e ]
 "254 mcc_generated_files/adcc.h
 [; ;mcc_generated_files/adcc.h: 254: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
 [v _ADCC_GetSingleConversion `(ui ~T0 @X0 0 ef1`E16155 ]
 "58 mcc_generated_files/tmr6.c
 [; ;mcc_generated_files/tmr6.c: 58: extern int16_t valor_AN2;
 [v _valor_AN2 `i ~T0 @X0 0 e ]
+"56
+[; ;mcc_generated_files/tmr6.c: 56: extern _Bool Analog_ref;
+[v _Analog_ref `a ~T0 @X0 0 e ]
 "59
 [; ;mcc_generated_files/tmr6.c: 59: extern int16_t valor_AN4;
 [v _valor_AN4 `i ~T0 @X0 0 e ]
@@ -2703,53 +2703,53 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr6.c: 182:     static uint16_t AN4_b;
 [v F16230 `ui ~T0 @X0 1 s AN4_b ]
 "184
-[; ;mcc_generated_files/tmr6.c: 184:     if(Analog_ref) {
-[e $ ! != -> _Analog_ref `i -> 0 `i 2277  ]
-{
-"185
-[; ;mcc_generated_files/tmr6.c: 185:         AN2_b = ADCC_GetSingleConversion(AN2);
+[; ;mcc_generated_files/tmr6.c: 184:     AN2_b = ADCC_GetSingleConversion(AN2);
 [e = F16229 ( _ADCC_GetSingleConversion (1 _AN2 ]
-"186
-[; ;mcc_generated_files/tmr6.c: 186:         valor_AN2 = (AN2_b - 2048)*35;
+"185
+[; ;mcc_generated_files/tmr6.c: 185:     valor_AN2 = (AN2_b - 2048)*35;
 [e = _valor_AN2 -> * - F16229 -> -> 2048 `i `ui -> -> 35 `i `ui `i ]
 "187
-[; ;mcc_generated_files/tmr6.c: 187:     }
-}
-[e :U 2277 ]
+[; ;mcc_generated_files/tmr6.c: 187:     if(Analog_ref) {
+[e $ ! != -> _Analog_ref `i -> 0 `i 2277  ]
+{
 "188
-[; ;mcc_generated_files/tmr6.c: 188:     AN4_b = ADCC_GetSingleConversion(AN4);
+[; ;mcc_generated_files/tmr6.c: 188:         AN4_b = ADCC_GetSingleConversion(AN4);
 [e = F16230 ( _ADCC_GetSingleConversion (1 _AN4 ]
 "189
-[; ;mcc_generated_files/tmr6.c: 189:     valor_AN4 = (AN4_b - 2048)*35;
+[; ;mcc_generated_files/tmr6.c: 189:         valor_AN4 = (AN4_b - 2048)*35;
 [e = _valor_AN4 -> * - F16230 -> -> 2048 `i `ui -> -> 35 `i `ui `i ]
-"191
-[; ;mcc_generated_files/tmr6.c: 191:     adc_ready = 1;
-[e = _adc_ready -> -> 1 `i `a ]
+"190
+[; ;mcc_generated_files/tmr6.c: 190:     }
+}
+[e :U 2277 ]
 "192
-[; ;mcc_generated_files/tmr6.c: 192: }
+[; ;mcc_generated_files/tmr6.c: 192:     adc_ready = 1;
+[e = _adc_ready -> -> 1 `i `a ]
+"193
+[; ;mcc_generated_files/tmr6.c: 193: }
 [e :UE 2276 ]
 }
-"195
-[; ;mcc_generated_files/tmr6.c: 195: void TMR6_SetInterruptHandler(void (* InterruptHandler)(void)){
+"196
+[; ;mcc_generated_files/tmr6.c: 196: void TMR6_SetInterruptHandler(void (* InterruptHandler)(void)){
 [v _TMR6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F16232 ]
 {
 [e :U _TMR6_SetInterruptHandler ]
 [v _InterruptHandler `*F16234 ~T0 @X0 1 r1 ]
 [f ]
-"196
-[; ;mcc_generated_files/tmr6.c: 196:     TMR6_InterruptHandler = InterruptHandler;
-[e = _TMR6_InterruptHandler _InterruptHandler ]
 "197
-[; ;mcc_generated_files/tmr6.c: 197: }
+[; ;mcc_generated_files/tmr6.c: 197:     TMR6_InterruptHandler = InterruptHandler;
+[e = _TMR6_InterruptHandler _InterruptHandler ]
+"198
+[; ;mcc_generated_files/tmr6.c: 198: }
 [e :UE 2278 ]
 }
-"199
-[; ;mcc_generated_files/tmr6.c: 199: void TMR6_DefaultInterruptHandler(void){
+"200
+[; ;mcc_generated_files/tmr6.c: 200: void TMR6_DefaultInterruptHandler(void){
 [v _TMR6_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR6_DefaultInterruptHandler ]
 [f ]
-"202
-[; ;mcc_generated_files/tmr6.c: 202: }
+"203
+[; ;mcc_generated_files/tmr6.c: 203: }
 [e :UE 2279 ]
 }

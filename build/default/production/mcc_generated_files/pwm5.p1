@@ -23,6 +23,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38440
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc\pic18f46k42.h: 38440: extern volatile CCPTMRS1bits_t CCPTMRS1bits __attribute__((address(0x3F5F)));
 [v _CCPTMRS1bits `VS1711 ~T0 @X0 0 e@16223 ]
+"46598
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc\pic18f46k42.h: 46598:     struct {
+[s S2122 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2122 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"46608
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc\pic18f46k42.h: 46608:     struct {
+[s S2123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2123 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
+"46597
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc\pic18f46k42.h: 46597: typedef union {
+[u S2121 `S2122 1 `S2123 1 ]
+[n S2121 . . . ]
+"46619
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc\pic18f46k42.h: 46619: extern volatile LATAbits_t LATAbits __attribute__((address(0x3FBA)));
+[v _LATAbits `VS2121 ~T0 @X0 0 e@16314 ]
 "250 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc\pic18f46k42.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc\pic18f46k42.h: 250: __asm("STATUS_CSHAD equ 03880h");
 [; <" STATUS_CSHAD equ 03880h ;# ">
@@ -2282,50 +2297,77 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49098
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc\pic18f46k42.h: 49098: __asm("TOSU equ 03FFFh");
 [; <" TOSU equ 03FFFh ;# ">
-"58 mcc_generated_files/pwm5.c
-[; ;mcc_generated_files/pwm5.c: 58:  void PWM5_Initialize(void)
+"59 mcc_generated_files/pwm5.c
+[; ;mcc_generated_files/pwm5.c: 59:  void PWM5_Initialize(void)
 [v _PWM5_Initialize `(v ~T0 @X0 1 ef ]
-"59
-[; ;mcc_generated_files/pwm5.c: 59:  {
+"60
+[; ;mcc_generated_files/pwm5.c: 60:  {
 {
 [e :U _PWM5_Initialize ]
 [f ]
-"62
-[; ;mcc_generated_files/pwm5.c: 62:     PWM5CON = 0x80;
+"63
+[; ;mcc_generated_files/pwm5.c: 63:     PWM5CON = 0x80;
 [e = _PWM5CON -> -> 128 `i `uc ]
-"65
-[; ;mcc_generated_files/pwm5.c: 65:     PWM5DCH = 0x15;
+"66
+[; ;mcc_generated_files/pwm5.c: 66:     PWM5DCH = 0x15;
 [e = _PWM5DCH -> -> 21 `i `uc ]
-"68
-[; ;mcc_generated_files/pwm5.c: 68:     PWM5DCL = 0xC0;
+"69
+[; ;mcc_generated_files/pwm5.c: 69:     PWM5DCL = 0xC0;
 [e = _PWM5DCL -> -> 192 `i `uc ]
-"71
-[; ;mcc_generated_files/pwm5.c: 71:     CCPTMRS1bits.P5TSEL = 1;
-[e = . . _CCPTMRS1bits 0 0 -> -> 1 `i `uc ]
 "72
-[; ;mcc_generated_files/pwm5.c: 72:  }
+[; ;mcc_generated_files/pwm5.c: 72:     CCPTMRS1bits.P5TSEL = 1;
+[e = . . _CCPTMRS1bits 0 0 -> -> 1 `i `uc ]
+"73
+[; ;mcc_generated_files/pwm5.c: 73:  }
 [e :UE 2263 ]
 }
-"74
-[; ;mcc_generated_files/pwm5.c: 74:  void PWM5_LoadDutyValue(uint16_t dutyValue)
-[v _PWM5_LoadDutyValue `(v ~T0 @X0 1 ef1`ui ]
 "75
-[; ;mcc_generated_files/pwm5.c: 75:  {
+[; ;mcc_generated_files/pwm5.c: 75:  void PWM5_LoadDutyValue(int16_t dutyValue)
+[v _PWM5_LoadDutyValue `(v ~T0 @X0 1 ef1`i ]
+"76
+[; ;mcc_generated_files/pwm5.c: 76:  {
 {
 [e :U _PWM5_LoadDutyValue ]
-"74
-[; ;mcc_generated_files/pwm5.c: 74:  void PWM5_LoadDutyValue(uint16_t dutyValue)
-[v _dutyValue `ui ~T0 @X0 1 r1 ]
 "75
-[; ;mcc_generated_files/pwm5.c: 75:  {
+[; ;mcc_generated_files/pwm5.c: 75:  void PWM5_LoadDutyValue(int16_t dutyValue)
+[v _dutyValue `i ~T0 @X0 1 r1 ]
+"76
+[; ;mcc_generated_files/pwm5.c: 76:  {
 [f ]
 "77
-[; ;mcc_generated_files/pwm5.c: 77:      PWM5DCH = (dutyValue & 0x03FC)>>2;
-[e = _PWM5DCH -> >> & _dutyValue -> -> 1020 `i `ui -> 2 `i `uc ]
+[; ;mcc_generated_files/pwm5.c: 77:      if(dutyValue < 0) {
+[e $ ! < _dutyValue -> 0 `i 2265  ]
+{
+"78
+[; ;mcc_generated_files/pwm5.c: 78:          dutyValue = -dutyValue;
+[e = _dutyValue -U _dutyValue ]
+"79
+[; ;mcc_generated_files/pwm5.c: 79:          do { LATAbits.LATA7 = 1; } while(0);
+[e :U 2268 ]
+{
+[e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
+}
+[e :U 2267 ]
 "80
-[; ;mcc_generated_files/pwm5.c: 80:      PWM5DCL = (dutyValue & 0x0003)<<6;
-[e = _PWM5DCL -> << & _dutyValue -> -> 3 `i `ui -> 6 `i `uc ]
+[; ;mcc_generated_files/pwm5.c: 80:      }
+}
+[e $U 2269  ]
 "81
-[; ;mcc_generated_files/pwm5.c: 81:  }
+[; ;mcc_generated_files/pwm5.c: 81:      else do { LATAbits.LATA7 = 0; } while(0);
+[e :U 2265 ]
+[e :U 2272 ]
+{
+[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
+}
+[e :U 2271 ]
+[e :U 2269 ]
+"84
+[; ;mcc_generated_files/pwm5.c: 84:      PWM5DCH = (dutyValue & 0x03FC)>>2;
+[e = _PWM5DCH -> >> & _dutyValue -> 1020 `i -> 2 `i `uc ]
+"87
+[; ;mcc_generated_files/pwm5.c: 87:      PWM5DCL = (dutyValue & 0x0003)<<6;
+[e = _PWM5DCL -> << & _dutyValue -> 3 `i -> 6 `i `uc ]
+"88
+[; ;mcc_generated_files/pwm5.c: 88:  }
 [e :UE 2264 ]
 }
