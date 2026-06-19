@@ -138,5 +138,6 @@ preventing actuator overdrive and integrator wind-up from saturating the output.
 
 **Juan Pablo Arenas** — Mechatronics Engineering, Pontificia Universidad Javeriana
 [GitHub @Fellbowl](https://github.com/Fellbowl)
+
 **Helver Santiago Gamboa** — Mechatronics Engineering, Pontificia Universidad Javeriana
 [GitHub @Elsanty2703](https://github.com/Elsanty2703)
